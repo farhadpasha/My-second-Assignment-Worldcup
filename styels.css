@@ -111,7 +111,7 @@ span {
     margin-left: 100px;
 }
 
-/* footer */
+/*............ footer...................... */
 footer {
     background-color: #161616;
     border: 2px solid black;
@@ -124,6 +124,51 @@ footer {
 .footer-details {
     display: flex;
     gap: 50px;
-    text-align: center;
-    margin-left: 300px;
+    align-items: center;
+    justify-content: space-between;
+
+    /* margin-left: 300px; */
+}
+
+@media only screen and (max-width:688px) {
+
+
+    .containers {
+        width: 100%;
+    }
+
+    .containers,
+    .container-right {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .containers,
+    .footer-details,
+    .banner-top {
+        flex-direction: column;
+    }
+
+}
+
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+
+    .containers {
+        width: 100%;
+
+    }
+
+    .containers,
+    .container-right {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .containers,
+    .container-left,
+    .footer-details,
+    .banner-top {
+        flex-direction: column;
+    }
 }
